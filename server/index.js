@@ -15,7 +15,6 @@ const db = mysql.createPool({
 app.use(express.json());
 app.use(cors());
 
-
 app.post('/register', (req, res) => {
    const email = req.body.email
    const password = req.body.password;
@@ -65,11 +64,6 @@ app.post('/login', (req, res) => {
         }
     })
 })
-
-
-
-
-
 
 app.listen(3001, () => {
     console.log("Servidor ligado")
